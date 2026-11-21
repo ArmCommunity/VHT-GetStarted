@@ -3,7 +3,11 @@ workdir: /home/runner
 backend:
   aws:
     ami-version: ~=1.1
-    instance-type: t2.micro
+    instance-type: g5g.xlarge
+    s3-bucket-name: c211-i120028-invalid-bucket
+    subnet-id: subnet-00000000000000000
+    security-group-id: sg-00000000000000000
+    iam-profile: Proj-AVHInstanceRole
 upload:
   - work/_temp/_runner_file_commands/*
   - .aws/*
